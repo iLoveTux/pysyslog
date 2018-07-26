@@ -18,11 +18,11 @@ from pysyslog import (
 @click.command()
 @click.argument("host", default="127.0.0.1")
 @click.argument("port", default=514, type=int)
-@click.option("-i", "--poll-interval", default=0.5, type=float)
-@click.option("-m", "--max-queue-size", default=50000, type=int)
-@click.option("-c", "--cert", type=click.Path(exists=True))
-@click.option("-k", "--key", type=click.Path(exists=True))
-@click.option("--logging-config", "-l", default=None, type=str)
+@click.option("-i", "--poll-interval", default=0.5, type=float, help="Number of seconds to poll for shutdown")
+@click.option("-m", "--max-queue-size", default=50000, type=int, help="The number of messages to allow in the queue")
+@click.option("-c", "--cert", type=click.Path(exists=True), help="The PEM formatted public certificate, must also provide --key")
+@click.option("-k", "--key", type=click.Path(exists=True), help="The PEM formatted private key, must also provide --cert")
+@click.option("--logging-config", "-l", default=None, type=str, help="The JSON formatted file containing the logging config")
 def main(
         host,
         port,

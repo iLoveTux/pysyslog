@@ -6,14 +6,9 @@ pysyslog
 .. image:: https://img.shields.io/pypi/v/pysyslog.svg
         :target: https://pypi.python.org/pypi/pysyslog
 
-.. image:: https://img.shields.io/travis/ilovetux/pysyslog.svg
-        :target: https://travis-ci.org/ilovetux/pysyslog
-
 .. image:: https://readthedocs.org/projects/pysyslog/badge/?version=latest
         :target: https://pysyslog.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
-
-
 
 
 Fast, efficient and useful syslog collector using TCP and optional TLS
